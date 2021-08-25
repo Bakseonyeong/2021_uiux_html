@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        body{
+            background-image: url(../images/bg02.jpg);
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+        form{position: relative;}
+        
+        .search{
+            position: absolute; left: 50%; top: 50%;
+            transform:translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        .seTit{
+            position: absolute; top: 50%; left: 20px; 
+            background: url(../images/searchtext.jpg);
+            width: 60px; height: 20px;
+            transform:translateY(-50%);
+            text-indent: -9999px; display: block;
+            cursor: pointer;
+        }
+        
+        .seTex{
+            width: 400px; height: 50px;
+            font-size: 20px; border: 2px solid #000;
+            border-radius: 25px; line-height: 30px;
+            text-indent: 90px; 
+            box-shadow: 5px 5px 0px #444;
+        }
+        
+        .seSub{
+            position: absolute; right: 8px; top: 50%;
+            transform:translateY(-50%);
+            background: url(../images/search.jpg) no-repeat center;
+            width: 40px; height: 40px;
+            border: 1px solid #666; border-radius: 50%;
+            text-indent: -9999px;
+        }
+        
+        .search img{
+            position: absolute; right: -80px; top: -210px;
+            animation-name: bal;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes bal{
+            /* from{top: -210px;} */
+            to{top: -230px;}
+        }
+
+
+        .air{
+            position: absolute; left: 0; bottom: 0;
+            animation-name: air;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+
+        }
+
+        @keyframes air{
+            from{bottom: -80px; left: -800px; transform: scale(0.5);}
+            to{bottom: 1400px; left: 1800px; transform: scale(2);}
+        }
+
+
+
+        .mb2{margin-bottom: 2em;}
+        .pb2{padding-bottom: 2em;}
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="search">
+        <img src="../images/content2.png" alt="" class="bal">
+        <form action="#" method="POST">
+            <label for="search" class="seTit">search</label>
+            <input type="text" id="search" placeholder="검색어를 입력하세요" class="seTex">
+            <input type="submit" value="search" class="seSub">
+            
+        </form>
+        
+    </div>
+    
+    <img src="../images/reallyAir.png" alt="" class="air">
+    
+</body>
+</html>
