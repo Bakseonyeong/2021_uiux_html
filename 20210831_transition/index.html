@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .box1{
+            width: 300px;height: 300px;
+            transition: 0.3s;
+            position: relative; overflow: hidden;
+            border: 10px solid #000;
+            background: #000; margin: 0 auto;
+        }
+        
+        .box1:hover{
+            background: #000; border: 30px solid #000;
+            /* transform: scale(1.2); */
+        }
+        
+        .box1 img{
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.3s;
+        }
+        
+        .box1:hover img{
+            transform: translate(-50%, -50%) scale(1.1);
+
+        }
+
+        .box1 .bg{
+            width: 100%; height: 100%; background: #000;
+            position: relative; opacity: 0; transition: 0.3s;
+        }
+
+        .box1:hover .bg{
+            opacity: 0.1;
+        }
+
+        .box1 .circle{
+            position: absolute;
+            width: 50px; height: 50px; 
+            /* background: pink; */
+            left: 50%; top: 50%; transform: translate(-50%, -50%);
+            transition: 0.3s; border: 4px solid #fff;
+            border-radius: 50%;
+        }
+        .box1:hover .circle{
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        
+        .circle .bar1,
+        .circle .bar2{
+            width: 30px;height: 4px;background: #fff;
+            border-radius: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); position: absolute;
+        }
+        .circle .bar2{transform: translate(-50%, -50%) rotate(90deg);}
+        
+
+        .box2{
+            width: 300px;height: 300px;
+            transition: 0.3s;
+            position: relative; overflow: hidden;
+            border: 10px solid #000;
+            background: #000; margin: 0 auto;
+        }
+        
+        .box2:hover{
+            background: #000; border: 30px solid #000;
+            /* transform: scale(1.2); */
+        }
+        
+        .box2 img{
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.3s;
+        }
+        
+        .box2:hover img{
+            transform: translate(-50%, -50%) scale(1.1);
+
+        }
+
+        .box2 .bg{
+            width: 100%; height: 100%; background: #000;
+            position: relative; opacity: 0; transition: 0.3s;
+        }
+
+        .box2:hover .bg{
+            opacity: 0.1;
+        }
+
+        .box2 .circle{
+            position: absolute;
+            width: 50px; height: 50px; 
+            /* background: pink; */
+            left: 50%; top: 50%; transform: translate(-50%, -50%);
+            transition: 0.3s; border: 4px solid #fff;
+            border-radius: 50%;
+
+            animation-duration: 0.3s;
+        }
+        
+        @keyframes ani{
+            from{transform: translate(-50%, -50%);}
+            to{transform: translate(-50%, -50%) rotate(180deg);}
+        }
+        
+        .box2:hover .circle{
+            animation-name: ani;
+            /* transform: translate(-50%, -50%) rotate(90deg);
+            transition: 0.3s; 
+            border: 4px solid #fff;
+            border-radius: 50%; */
+        }
+
+
+
+        .m{}
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box1">
+        <img src="../images/testimg.jpg" alt="">
+        <div class="bg"></div>
+        <div class="circle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+    </div>
+    <div class="box2">
+        <img src="../images/testimg.jpg" alt="">
+        <div class="bg"></div>
+        <div class="circle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+    </div>
+
+
+    <style>
+        .box3{
+            width: 300px; height: 60px;
+            border: 1px solid #000;
+            padding-left: 20px; position: relative;
+            overflow: hidden;
+            transition: 0.3s; padding-right: 10px;
+        }
+        .box3 .txt{line-height: 60px; position: relative;}
+        .box3 .bar{
+            width: 0; height: 60px; background: lightblue;
+            position: absolute; top: 0; left: 0;
+            transition: 0.3s;
+        }
+
+        .box3:hover .bar{width: 100%;}
+        .box3:hover .txt{color: white;}
+
+        .box3 .txt::before{
+            content:""; display: block; width: 100px; height: 2px;
+            background: #000; position: absolute;
+            right: 0; top: 50%; border-radius: 1px;
+        }
+        .box3 .txt:after{
+            content:"";
+            display: block;width: 1px; 
+            position: absolute; right: -10px;top: calc(50% - 6px);
+            border-width: 7px;
+            border-color: transparent transparent transparent black;
+            border-style: solid;
+        }
+
+        .box3:hover .txt:before{background: #fff;}
+        .box3:hover .txt:after{border-color: transparent transparent transparent white;}
+
+    </style>
+
+    <div class="box3">
+        <div class="bar"></div>
+        <p class="txt">Platform business</p>
+    </div>
+    
+</body>
+</html>
