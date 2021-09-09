@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seb2</title>
+
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider()
+        });
+
+    </script>
+
+    <style>
+        h1{margin: 0 auto; width: 100px;}
+
+        .gnb{width: 1000px; margin: 0 auto; position: relative; z-index: 1;}
+        .gnb>ul>li{float: left; width: calc(100% / 6); background: lightyellow;
+        transition: 0.3s; position: relative;}
+        .gnb>ul>li>a{
+            display: block; font-weight: bold; line-height: 40px; text-align: center; position: relative; z-index: 1; background: lightyellow; font-size: 20px;
+        }
+        .gnb>ul>li:hover{background: yellowgreen;}
+        .gnb>ul>li:hover .sub{top: 40px;}
+        /* .gnb>ul>li:hover a{
+            color:darkgreen;
+        } */
+        .gnb>ul>li {}
+        
+        
+        .sub{
+            position: absolute; width: 100%; top: -400%;background:rgba(220, 245, 129, 1); transition: 0.3s;
+        }
+
+        .sub a{
+            font-size: 14px; color: #666; text-align: center; display: block; line-height: 30px;
+        }
+        .sub a:hover{background: lightgoldenrodyellow; font-weight: bold;}
+
+    </style>
+
+
+</head>
+<body>
+    <!-- <header>
+        <h1>seb2</h1>
+    </header> -->
+
+    <nav class="gnb">
+        <ul class="clearfix">
+            <li>
+                <a href="#">menu1</a>
+                <ul class="sub">
+                    <li><a href="#">menu1_1</a></li>
+                    <li><a href="#">menu1_2</a></li>
+                    <li><a href="#">menu1_3</a></li>
+                    <li><a href="#">menu1_4</a></li>
+                    <li><a href="#">menu1_5</a></li>
+                    <li><a href="#">menu1_6</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">menu2</a>
+                <ul class="sub">
+                    <li><a href="#">menu2_1</a></li>
+                    <li><a href="#">menu2_2</a></li>
+                    <li><a href="#">menu2_3</a></li>
+                    <li><a href="#">menu2_4</a></li>
+                    <li><a href="#">menu2_5</a></li>
+                    <li><a href="#">menu2_6</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">menu3</a>
+                <ul class="sub">
+                    <li><a href="#">menu3_1</a></li>
+                    <li><a href="#">menu3_2</a></li>
+                    <li><a href="#">menu3_3</a></li>
+                    <li><a href="#">menu3_4</a></li>
+                    <li><a href="#">menu3_5</a></li>
+                    <li><a href="#">menu3_6</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">menu4</a>
+                <ul class="sub">
+                    <li><a href="#">menu4_1</a></li>
+                    <li><a href="#">menu4_2</a></li>
+                    <li><a href="#">menu4_3</a></li>
+                    <li><a href="#">menu4_4</a></li>
+                    <li><a href="#">menu4_5</a></li>
+                    <li><a href="#">menu4_6</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">menu5</a>
+                <ul class="sub">
+                    <li><a href="#">menu5_1</a></li>
+                    <li><a href="#">menu5_2</a></li>
+                    <li><a href="#">menu5_3</a></li>
+                    <li><a href="#">menu5_4</a></li>
+                    <li><a href="#">menu5_5</a></li>
+                    <li><a href="#">menu5_6</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#">menu6</a>
+                <ul class="sub">
+                    <li><a href="#">menu6_1</a></li>
+                    <li><a href="#">menu6_2</a></li>
+                    <li><a href="#">menu6_3</a></li>
+                    <li><a href="#">menu6_4</a></li>
+                    <li><a href="#">menu6_5</a></li>
+                    <li><a href="#">menu6_6</a></li>
+                </ul>
+            </li>
+    
+        </ul>
+    </nav>
+    
+</body>
+</html>
