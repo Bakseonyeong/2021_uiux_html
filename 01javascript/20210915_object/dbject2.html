@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+
+    <style>
+        .table li{float: left; padding-right: 6px;}
+    </style>
+
+</head>
+<body>
+    <script>
+        const mem = ["이태민","최민호","김기범","김종현","이진기"];
+        const kor = [99,88,77,66,55];
+        const eng = [91,82,73,46,64];
+
+        for(let i=0;i<mem.length;i++){
+            // document.write(mem[i]+"<br>");
+            document.write(`<ul class="table clearfix"><li>${mem[i]}</li><li>${kor[i]}</li><li>${eng[i]}</li></ul>`)
+        }
+
+        const mem1 = [
+            {name:"이태민",kor:99,eng:99}
+        ]
+
+    </script>
+    
+</body>
+</html>

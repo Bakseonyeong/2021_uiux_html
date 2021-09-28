@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <p id="first" class="box" style="color: blueviolet; background: yellow;"
+    onclick="this.style.color='teal'">
+        이것은 <span style="color: crimson;">문장입니다.</span>
+    </p>
+
+    <button>스타일변경</button>
+    <input type="button" value="style">
+    <a href="#">스타일변경</a>
+    <div onclick="change()">스타일변경</div>
+    <button onclick="init()">초기화</button>
+
+    <script>
+        // document.getElementById("first").style.color = "red";
+        // const pf = document.getElementById("#first");
+        // const pf = document.querySelector("#first")[0];
+        // const pf = document.getElementsByClassName("box")[0];
+        // const pf = document.getElementsByTagName("p")[0];
+        // m const pf = document.querySelector(".box");
+
+        // pf.style.background = "skyblue"
+
+        const  pf = document.querySelector("#first.box");
+        const pSp = document.querySelector("#first>span");
+
+        function change(){
+
+            pf.style.color = "green";
+            pf.style.fontSize = "20px";
+
+            pSp.style.display = "none";
+
+            document.querySelector("body").style.background="black";
+
+        }
+
+        function init(){
+            document.querySelector("body").style.background="initial";
+            pf.style.color = "initial"
+
+        }
+
+    </script>
+    
+</body>
+</html>

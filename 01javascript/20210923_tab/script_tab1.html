@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        .tab{display: flex;}
+        .tab li{
+            width: 100px; text-align: center; padding: 10px 0;
+        }
+
+        .tab li.on{background: skyblue;}
+
+        .con{display: flex;}
+        .con div{width: 250px;height: 150px; background: #ddd; padding: 20px;}
+        .con div.off{display: none;}
+
+    </style>
+
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+        
+    </ul>
+
+    <div class="con">
+        <div>
+            1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, tenetur?
+        </div>
+        <div class="off">
+            2Quod quaerat totam non sapiente asperiores fuga quasi sunt eaque.
+        </div>
+        <div class="off">
+            3Adipisci soluta illum, voluptates odit optio enim molestiae laboriosam neque.
+        </div>
+        <div class="off">
+            4Numquam eum praesentium voluptatem alias, dolore molestiae quo qui in?
+        </div>
+    </div>
+
+
+    <script>
+        const tabList = document.querySelectorAll(".tab li");
+        const conList = document.querySelectorAll(".con div");
+
+        for(let i=0;i<tabList.length;i++){
+            tabList[i].onclick = function(){
+                for(let i=0;i<tabList.length;i++){
+                    tabList[i].classList.remove("on");
+                    conList[i].classList.add("off");
+                };
+                // this.classList.add("on");
+                tabList[i].classList.add("on");
+                conList[i].classList.remove("off");
+            };
+        }
+            
+        // for(let j=0;j<conList.length;j++){
+        //     conList[j].onclick = function(){
+        //         for(let j=0;j<conList.length;j++){
+        //             conList[j].classList.add("off");
+        //         };
+        //         // this.classList.add("on");
+        //         conList[j].classList.remove("off");
+        //     };
+        // }    
+
+    </script>
+
+    <!-- <script>
+        const tabList = document.querySelectorAll(".tab li");
+        
+        for(let i=0;i<tabList.length;i++){
+            tabList[i].addEventListener("click",function(){
+                for(let i=0;i<tabList.length;i++){
+                    tabList[i].classList.remove("on");
+                };
+
+                tabList[i].classList.add("on");
+            });
+        };
+
+    </script> -->
+
+    <!-- <script>
+        const tabList = document.querySelectorAll(".tab li");
+ 
+        tabList[0].addEventListener("click",function(){
+
+            for(let i=0;i<tabList.length;i++){
+                tabList[i].classList.remove("on");
+            };
+
+            // tabList[0].classList.remove("on");
+            // tabList[1].classList.remove("on");
+            // tabList[2].classList.remove("on");
+            // tabList[3].classList.remove("on");
+            tabList[0].classList.add("on");
+            
+        });
+        
+        tabList[1].addEventListener("click",function(){
+            
+            for(let i=0;i<tabList.length;i++){
+                tabList[i].classList.remove("on");
+            };
+
+            tabList[1].classList.add("on")
+
+        });
+        
+        tabList[2].addEventListener("click",function(){
+
+            for(let i=0;i<tabList.length;i++){
+                tabList[i].classList.remove("on");
+            };
+
+            tabList[2].classList.add("on")
+
+        });
+        
+        tabList[3].addEventListener("click",function(){
+
+            for(let i=0;i<tabList.length;i++){
+                tabList[i].classList.remove("on");
+            };
+
+            tabList[3].classList.add("on")
+
+        });
+
+
+    </script> -->
+
+
+    
+</body>
+</html>
