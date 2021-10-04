@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, tempora placeat. Rerum eaque, natus doloribus iste aliquam temporibus aspernatur placeat facilis modi atque reprehenderit totam velit laborum esse est a corporis provident quaerat quidem similique id ducimus non fugiat. Minus voluptatem eius qui minima tenetur. Pariatur odit incidunt est ratione!
+    <img src="../../images/testimg.jpg" alt="" onmousemove="where(event)">
+    <div class="infor">
+
+    </div>
+
+    <script>
+        const infor = document.querySelector(".infor");
+        function where(e){
+            let txt ="";
+            txt+= 
+            // e.clientX + ", " + e.clientY;
+            `clientX : ${e.clientX}, clientY : ${e.clientY}<br>
+            offsetX : ${e.offsetX}, offsetY : ${e.offsetY}<br>`;
+            
+            infor.innerHTML = txt;
+        }
+        
+    </script>
+    
+    
+</body>
+</html>
