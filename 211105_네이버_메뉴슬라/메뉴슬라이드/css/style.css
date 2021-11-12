@@ -1,0 +1,64 @@
+@charset "utf-8";
+body{
+    font-family: 'Nanum Gothic', sans-serif; background-color:seashell;
+}
+
+
+
+.bx-viewport>ul>li{height: 45vw !important; min-height: 360px; min-width: 800px;}
+.slider img{min-height: 100%; min-width: 100%;}
+
+.bx-wrapper {
+    -moz-box-shadow:  0 none;
+    -webkit-box-shadow: 0 none;
+    box-shadow: 0 none;
+    border: 0 none;
+    background: #fff;
+}
+
+.bx-wrapper .bx-pager{bottom: 25px;}
+
+.bx-wrapper .bx-pager.bx-default-pager a{background: #888; width: 1.3vw; height: 1.3vw; border-radius: 1.5vw;}
+.bx-wrapper .bx-pager.bx-default-pager a:hover{background: #ddd;}
+.bx-wrapper .bx-pager.bx-default-pager a.active{background: #fff; width: 3.5vw;}
+
+
+
+
+h1{text-align: center; padding: 10px; font-size: 4.5vw; min-width: 800px; color: #473633;}
+
+.bar{display: none;}
+.gnb:hover .bar{display: block; position: absolute; top: 40px; width: 100%; height: 40px; background: rgba(255, 255, 255, 0.8);}
+
+
+.subme{display: none;}
+.gnb{background: #a57777; width: 100%; position: relative; z-index: 1;}
+.gnb>ul{width: 800px; margin: 0 auto; position: relative;}
+.gnb>ul>li{float: left; width: calc(100% / 4);}
+.gnb>ul>li:hover{background: #fda5af;}
+.gnb>ul>li a{
+    display: block; color: white; font-weight: bold; text-align: center; line-height: 40px;
+}
+
+.gnb>ul>li:hover .subme{
+    display: block;  
+}
+.subme{position: absolute;}
+.subme li{float: left; padding: 0px 10px;}
+.subme li a{color: #555 !important; z-index: 100;}
+.subme li a:hover{color: midnightblue !important;}
+.gnb>ul>li:nth-child(2) .subme{left: 37%; transform: translateX(-50%);}
+.gnb>ul>li:nth-child(3) .subme{left: 62%; transform: translateX(-50%);}
+.gnb>ul>li:nth-child(4) .subme{right: 0%;}
+.subme{}
+
+
+
+/* .bx-wrapper .bx-controls-direction a{width: 3vw !important; height: 8vw; margin-top: -34px;}
+.bx-wrapper .bx-prev{left: 10px; background: url(../images/prev_btn.png) no-repeat; width: 100%;}
+.bx-wrapper .bx-next{right: 10px; background: url(../images/next_btn.png) no-repeat; background-size: contain; width: 100%; z-index: 9999;}
+
+.bx-wrapper .bx-next:hover{
+    background-position: 0 0; z-index: 9999;
+} */
+
