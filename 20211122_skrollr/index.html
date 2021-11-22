@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skrollr</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <script src="js/skrollr.min.js"></script>
+
+    <style>
+        body{height: 500vh;}
+        .box{position: fixed; color: white;}
+        #scene_1{}
+        .man{
+            position: absolute; left: 50%; top: 50%;
+        }
+        .content1{
+            width: 300px; height: 200px; background: white; border-radius: 10px; padding: 16px;
+        }
+
+        @media screen and (min-width:700px){
+            .content1{
+                position: absolute; top: 500px;  right: 10%;
+            }
+        }
+
+        @media screen and (max-width:699px){
+            .content1{
+                position: fixed; bottom: 50px; left: 50%; margin-left: -150px;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box">
+        현재위치 : <span class="scroll">0</span><br>
+        스크롤높이 : <span class="scrollHeight">0</span>
+    </div>
+
+    <section id="scene_1" class="view01">
+        <div class="man">
+            <img src="img/char/character_astronaut.svg" alt="">
+            
+        </div>
+        <div class="text">
+            <div class="content1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, provident?
+            </div>
+        </div>
+    </section>
+
+    <script>
+        skrollr.init();
+
+        let scrollY = 0;
+        let wHeight = 0;
+
+
+        window.addEventListener("scroll",function(){
+            viewer();
+        });
+
+        function viewer(){
+            scrollY = window.pageYOffset;
+            wHeight = document.body.offsetHeight - window.innerHeight;
+    
+            document.querySelector(".scroll").innerHTML = scrollY;
+            document.querySelector(".scrollHeight").innerHTML = wHeight;
+            console.log(scrollY/wHeight*100)
+
+        };
+
+
+
+    </script>
+    
+</body>
+</html>
